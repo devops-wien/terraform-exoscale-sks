@@ -3,7 +3,7 @@ https://registry.terraform.io/providers/exoscale/exoscale/latest/docs/resources/
 
 ## usage
 
-```
+```hcl
 //--------------------------------------------------------------------
 // Variables
 variable "sks_key" {}
