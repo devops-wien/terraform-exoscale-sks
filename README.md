@@ -12,9 +12,10 @@ variable "sks_secret" {}
 //--------------------------------------------------------------------
 // Modules
 module "sks" {
-  source  = "app.terraform.io/devops-wien/sks/exoscale"
+  source  = "devops-wien/sks/exoscale"
   version = "0.0.1"
 
   key = "${var.sks_key}"
   secret = "${var.sks_secret}"
 }
+```
