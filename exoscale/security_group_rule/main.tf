@@ -1,6 +1,6 @@
 resource "exoscale_security_group_rule" "nodeport-services-ipv4" {
   security_group_id = var.security_group_id
-  description       = "NodePort services IPv4"
+  description       = "NodePort services IPv4 - Managed by Terraform"
   type              = "INGRESS"
   protocol          = "TCP"
   cidr              = "0.0.0.0/0"
@@ -10,7 +10,7 @@ resource "exoscale_security_group_rule" "nodeport-services-ipv4" {
 
 resource "exoscale_security_group_rule" "nodeport-services-ipv6" {
   security_group_id = var.security_group_id
-  description       = "NodePort services IPv6"
+  description       = "NodePort services IPv6 - Managed by Terraform"
   type              = "INGRESS"
   protocol          = "TCP"
   cidr              = "::/0"
@@ -20,7 +20,7 @@ resource "exoscale_security_group_rule" "nodeport-services-ipv6" {
 
 resource "exoscale_security_group_rule" "sks-kubelet" {
   security_group_id      = var.security_group_id
-  description            = "SKS kubelet"
+  description            = "SKS kubelet - Managed by Terraform"
   type                   = "INGRESS"
   protocol               = "TCP"
   start_port             = 10250
@@ -30,7 +30,7 @@ resource "exoscale_security_group_rule" "sks-kubelet" {
 
 resource "exoscale_security_group_rule" "calico" {
   security_group_id      = var.security_group_id
-  description            = "Calico traffic"
+  description            = "Calico traffic - Managed by Terraform"
   type                   = "INGRESS"
   protocol               = "UDP"
   start_port             = 4789
