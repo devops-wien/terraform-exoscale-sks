@@ -42,3 +42,10 @@ output "sks-security-groupd-id" {
   value = module.exoscale_security_group.id
   description = "The security group ID."
 }
+
+# sks_kubeconfig
+output "kubeconfig" {
+  description = "The generated Kubeconfig (YAML content)."
+  value = module.exoscale_sks_kubeconfig.kubeconfig
+  sensitive = true
+}

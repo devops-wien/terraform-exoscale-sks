@@ -10,6 +10,17 @@ module "exoscale_sks_cluster" {
   labels         = var.labels
 }
 
+module "exoscale_sks_kubeconfig" {
+  source                = "./exoscale/sks_kubeconfig"
+  depends_on            = [module.exoscale_sks_cluster.id]
+  cluster_id            = module.exoscale_sks_cluster.id
+  zone                  = var.zone
+  groups                = var.groups
+  user                  = var.user
+  ttl_seconds           = var.ttl_seconds
+  early_renewal_seconds = var.early_renewal_seconds
+}
+
 module "exoscale_security_group" {
   source           = "./exoscale/security_group"
   description      = var.description
