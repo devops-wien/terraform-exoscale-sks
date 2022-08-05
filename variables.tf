@@ -82,13 +82,13 @@ variable "user" {
 }
 
 variable "ttl_seconds" {
-  description = "The Time-to-Live of the Kubeconfig, after which it will expire / become invalid (seconds; default: 2592000 = 30 days)."
+  description = "The Time-to-Live of the Kubeconfig, after which it will expire / become invalid (seconds; default: 315360000 = 10 years)."
   type        = number
-  default     = 2592000
+  default     = 315360000
 }
 
 variable "early_renewal_seconds" {
-  description = "If set, the resource will consider the Kubeconfig to have expired the given number of seconds before its actual CA certificate or client certificate expiry time. This can be useful to deploy an updated Kubeconfig in advance of the expiration of its internal current certificate. Note however that the old certificate remains valid until its true expiration time since this resource does not (and cannot) support revocation. Also note this advance update can only take place if the Terraform configuration is applied during the early renewal period (seconds; default: 0)."
+  description = "If set, the resource will consider the Kubeconfig to have expired the given number of seconds before its actual CA certificate or client certificate expiry time. This can be useful to deploy an updated Kubeconfig in advance of the expiration of its internal current certificate. Note however that the old certificate remains valid until its true expiration time since this resource does not (and cannot) support revocation. Also note this advance update can only take place if the Terraform configuration is applied during the early renewal period (seconds; default: 31536000 = 1 year)."
   type        = number
-  default     = 0
+  default     = 31536000
 }
