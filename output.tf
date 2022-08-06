@@ -49,8 +49,7 @@ output "sks-security-group-id" {
 # sks_kubeconfig
 output "host" {
   description = "The hostname (in form of URI) of the Kubernetes API. Can be sourced from KUBE_HOST."
-  value       = module.exoscale_sks_kubeconfig.host
-  sensitive   = true
+  value       = nonsensitive(module.exoscale_sks_kubeconfig.host)
 }
 
 output "client_certificate" {
