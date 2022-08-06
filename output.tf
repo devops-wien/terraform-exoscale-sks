@@ -41,11 +41,6 @@ output "state" {
   description = "The cluster state."
 }
 
-output "sks-security-group-id" {
-  value       = module.exoscale_security_group.id
-  description = "The security group ID."
-}
-
 # sks_kubeconfig
 output "host" {
   description = "The hostname (in form of URI) of the Kubernetes API. Can be sourced from KUBE_HOST."

@@ -21,14 +21,3 @@ module "exoscale_sks_kubeconfig" {
   early_renewal_seconds = var.early_renewal_seconds
 }
 
-module "exoscale_security_group" {
-  source           = "./exoscale/security_group"
-  description      = var.description
-  external_sources = var.external_sources
-  name             = local.name
-}
-
-module "security_group_rule" {
-  source            = "./exoscale/security_group_rule"
-  security_group_id = module.exoscale_security_group.id
-}

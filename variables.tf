@@ -62,12 +62,6 @@ variable "labels" {
   default     = {}
 }
 
-variable "external_sources" {
-  description = "A list of external network sources, in CIDR notation."
-  type        = list(string)
-  default     = []
-}
-
 # sks_kubeconfig
 variable "groups" {
   description = "Group names in the generated Kubeconfig. The certificate present in the Kubeconfig will have these roles set in the Organization field."
