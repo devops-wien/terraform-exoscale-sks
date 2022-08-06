@@ -1,7 +1,7 @@
 module "exoscale_sks_cluster" {
   source         = "./exoscale/sks_cluster"
   zone           = var.zone
-  name           = var.name
+  name           = local.name
   description    = var.description
   auto_upgrade   = var.auto_upgrade
   exoscale_ccm   = var.exoscale_ccm
@@ -25,7 +25,7 @@ module "exoscale_security_group" {
   source           = "./exoscale/security_group"
   description      = var.description
   external_sources = var.external_sources
-  name             = var.name
+  name             = local.name
 }
 
 module "security_group_rule" {
