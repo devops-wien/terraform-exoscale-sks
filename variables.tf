@@ -92,3 +92,8 @@ variable "early_renewal_seconds" {
   type        = number
   default     = 31536000
 }
+
+variable "prefix_name" {
+  description = "Prefix-Name"
+  default = "sks"
+}
