@@ -10,7 +10,7 @@ output "aggregation_ca" {
 }
 
 output "control_plane_ca" {
-  value       = module.exoscale_sks_cluster.aggregation_ca
+  value       = module.exoscale_sks_cluster.control_plane_ca
   description = "The CA certificate (in PEM format) for TLS communications between control plane components."
   sensitive   = true
 }
