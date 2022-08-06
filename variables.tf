@@ -23,13 +23,13 @@ variable "zone" {
 variable "name" {
   description = "(Required) The SKS cluster name."
   type        = string
-  default     = "terraform-exoscale-sks"
+  default     = ""
 }
 
 variable "description" {
   description = "A free-form text describing the cluster."
   type        = string
-  default     = "default description"
+  default     = "Managed by Terraform"
 }
 
 variable "auto_upgrade" {
